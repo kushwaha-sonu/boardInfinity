@@ -12,7 +12,8 @@ import {useToast} from "@/hooks/use-toast";
 
 
 
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 
 const SingleTask = ({id,title,description,dueDate,priority,status}) => {
 
