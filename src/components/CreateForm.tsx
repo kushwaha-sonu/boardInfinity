@@ -18,7 +18,8 @@ import {toast} from "@/hooks/use-toast";
 
 
 
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 const CreateForm = ({onClose}) => {
     const formSchema = z.object({
         title: z.string().min(4, { message: "Title is required." }),

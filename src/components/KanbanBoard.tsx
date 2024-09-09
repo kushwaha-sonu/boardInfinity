@@ -5,7 +5,7 @@ import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
 import db from "@/firebase/firebaseConfig";
 import KanbanColumn from "@/components/KanbanColumn";
 import { Loader2 } from "lucide-react";
-import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
+import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 
 type Task = {
     id: string;
@@ -60,7 +60,7 @@ const KanbanBoard: React.FC = () => {
         if (!destination || (source.droppableId === destination.droppableId && source.index === destination.index)) return;
 
         const sourceTasks = getTasksByStatus(source.droppableId as Status);
-        const destinationTasks = getTasksByStatus(destination.droppableId as Status);
+        // const destinationTasks = getTasksByStatus(destination.droppableId as Status);
 
         const movedTask = sourceTasks.find(task => task.id === draggableId);
         if (!movedTask) return;
